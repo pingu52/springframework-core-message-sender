@@ -1,7 +1,7 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
-public class SmsMessageSender implements MessageSender{
-    public SmsMessageSender(){
+public class smsMessageSender implements MessageSender{
+    public smsMessageSender(){
         System.out.println("sms init!");
     }
     void init(){

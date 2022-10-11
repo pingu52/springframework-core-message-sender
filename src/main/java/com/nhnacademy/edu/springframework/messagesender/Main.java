@@ -1,6 +1,5 @@
 package com.nhnacademy.edu.springframework.messagesender;
 
-import com.nhnacademy.edu.springframework.messagesender.service.MessageSendService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
@@ -17,9 +16,10 @@ public class Main {
         context.getBean("SmsMessageSender",MessageSender.class).sendMessage(user,"Message");
 */
         System.out.println("-------------------------------------------------");
+/*
         new MessageSendService(context.getBean("EmailMessageSender",MessageSender.class)).doSendMessage();
         new MessageSendService(context.getBean("SmsMessageSender",MessageSender.class)).doSendMessage();
-
+*/
         System.gc();
         context.close();
     }
