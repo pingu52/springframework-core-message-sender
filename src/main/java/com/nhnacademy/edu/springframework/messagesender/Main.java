@@ -8,18 +8,20 @@ public class Main {
     public static void main(String [] args){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:/beans.xml");
 
-        User user = new User("b@b.co","10101");
+        /*User user = new User("b@b.co","10101");
         context.getBean("EmailMessageSender",MessageSender.class).sendMessage(user,"message");
         context.getBean("EmailMessageSender",MessageSender.class).sendMessage(user,"message");
 
         System.out.println("------------------------------------------------");
         context.getBean("SmsMessageSender",MessageSender.class).sendMessage(user,"Message");
         context.getBean("SmsMessageSender",MessageSender.class).sendMessage(user,"Message");
-
+*/
         System.out.println("-------------------------------------------------");
         new MessageSendService(context.getBean("EmailMessageSender",MessageSender.class)).doSendMessage();
         new MessageSendService(context.getBean("SmsMessageSender",MessageSender.class)).doSendMessage();
 
+        System.gc();
+        context.close();
     }
     /**
      * 실습 2

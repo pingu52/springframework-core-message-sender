@@ -6,10 +6,10 @@
 
 
     <bean id="SmsMessageSender"
-          class="com.nhnacademy.edu.springframework.messagesender.SmsMessageSender" scope="prototype">
+          class="com.nhnacademy.edu.springframework.messagesender.SmsMessageSender" scope="prototype" init-method="init">
     </bean>
 
-    <bean id="EmailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender" scope="singleton">
+    <bean id="EmailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender" scope="singleton" destroy-method="destroy">
     </bean>
 
 </beans>
