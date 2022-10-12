@@ -11,6 +11,7 @@
     <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
     <context:property-placeholder location="classpath:api.properties" />
 
+<!--
     <bean id="smsMessageSender"
           class="com.nhnacademy.edu.springframework.messagesender.smsMessageSender">
         <qualifier type="com.nhnacademy.edu.springframework.messagesender.SMS"/>
@@ -18,9 +19,10 @@
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender" destroy-method="destroy">
     </bean>
+-->
 
-    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.messagesender.service.messageSendService" >
+    <!--<bean id="messageSendService" class="com.nhnacademy.edu.springframework.messagesender.service.messageSendService" >
 
-    </bean>
+    </bean>-->
 </beans>
 
