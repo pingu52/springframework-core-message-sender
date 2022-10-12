@@ -14,6 +14,11 @@ public class EmailMessageSender implements MessageSender, DisposableBean {
     }
 
     @Override
+    public void shutdown() {
+        System.out.println("call back email shutdown()");
+    }
+
+    @Override
     public void destroy() throws Exception {
         System.out.println("destroy method called in EmailMessageSender");
     }

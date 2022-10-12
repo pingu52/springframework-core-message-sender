@@ -7,6 +7,10 @@ public class smsMessageSender implements MessageSender{
     void init(){
         //System.out.println("init method called in SmsMessageSender");
     }
+
+    public void shutdown(){
+        System.out.println("call back sms shutdown()");
+    }
     public void sendMessage(User user,String message){
         System.out.println("sms :"+user.getPhoneNumber()+" : "+ message);
     }
